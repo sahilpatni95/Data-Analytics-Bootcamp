@@ -1,2 +1,2 @@
-#Ineuron Data Analytics Bootcamp
-Ineuron Course-A-Thon - Data Analytics Bootcamp Challenge
+# ineuron Data Analytics Bootcamp
+I-neuron Course-A-Thon - Data Analytics Bootcamp Challenge
