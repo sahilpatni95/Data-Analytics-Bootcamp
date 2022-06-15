@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\Test\Desktop\Alteryx Data Files\Case Studies\CS6-Join with Multiple Criteria\(1) . Master Table.xlsx|||`Matertable`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[Master
+]]></AnnotationText>
+          <DefaultAnnotationText>(1) . Master Table.xlsx
+Query=`Matertable`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FIRSTNAME" size="255" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Case Studies\CS6-Join with Multiple Criteria\(1) . Master Table.xlsx|||`Matertable`" type="V_String" />
+            <Field name="LASTNAME" size="255" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Case Studies\CS6-Join with Multiple Criteria\(1) . Master Table.xlsx|||`Matertable`" type="V_String" />
+            <Field name="SALARY" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Case Studies\CS6-Join with Multiple Criteria\(1) . Master Table.xlsx|||`Matertable`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\Test\Desktop\Alteryx Data Files\Case Studies\CS6-Join with Multiple Criteria\(2) Transactional Table.xlsx|||`transactionalTable`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[Transactional
+]]></AnnotationText>
+          <DefaultAnnotationText>(2) Transactional Table.xlsx
+Query=`transactionalTable`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FIRSTNAME" size="255" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Case Studies\CS6-Join with Multiple Criteria\(2) Transactional Table.xlsx|||`transactionalTable`" type="V_String" />
+            <Field name="LASTNAME" size="255" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Case Studies\CS6-Join with Multiple Criteria\(2) Transactional Table.xlsx|||`transactionalTable`" type="V_String" />
+            <Field name="DEPARTMENT" size="255" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Case Studies\CS6-Join with Multiple Criteria\(2) Transactional Table.xlsx|||`transactionalTable`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="186" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="FIRSTNAME" />
+            <Field field="LASTNAME" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="FIRSTNAME" />
+            <Field field="LASTNAME" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_FIRSTNAME" selected="False" rename="Right_FIRSTNAME" input="Right_" />
+                <SelectField field="Right_LASTNAME" selected="False" rename="Right_LASTNAME" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Right" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>6) Joins Tables with Multiple Criteria</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

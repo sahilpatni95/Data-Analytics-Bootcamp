@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.2">
+  <Nodes>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="30" y="18" width="264" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>FILTER - Number</Text>
+          <Font name="Bookman Old Style" size="18" style="0" />
+          <TextColor name="White" />
+          <FillColor name="Black" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.4 FILTER$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Section 3 - Preparation.xlsx
+Query=`3.4 FILTER$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row ID" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.4 FILTER$`" type="Double" />
+            <Field name="Order Date" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.4 FILTER$`" type="Date" />
+            <Field name="State" size="255" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.4 FILTER$`" type="V_String" />
+            <Field name="Sub-Category" size="255" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.4 FILTER$`" type="V_String" />
+            <Field name="Sales" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.4 FILTER$`" type="Double" />
+            <Field name="Quantity" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.4 FILTER$`" type="Double" />
+            <Field name="Discount" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.4 FILTER$`" type="Double" />
+            <Field name="Profit" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.4 FILTER$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="162" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Sales] &gt;= 500
+
+AND
+
+[Profit] &gt; 75</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Sales] &gt;= 500
+
+AND
+
+[Profit] &gt; 75</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>3.5 FILTER - NUMBER</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

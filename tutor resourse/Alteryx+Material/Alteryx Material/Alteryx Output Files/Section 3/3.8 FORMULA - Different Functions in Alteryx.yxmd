@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="402" y="30" width="264" height="108" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[1) Date Function
+2) Text Function
+3) Number Functions
+4) Conditional Function
+]]></Text>
+          <Font name="Bookman Old Style" size="15.75" style="1" />
+          <TextColor name="White" />
+          <FillColor name="Maroon" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.7 FORUMULA$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Section 3 - Preparation.xlsx
+Query=`3.7 FORUMULA$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row ID" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.7 FORUMULA$`" type="Double" />
+            <Field name="Order Date" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.7 FORUMULA$`" type="Date" />
+            <Field name="Customer Name" size="255" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.7 FORUMULA$`" type="V_String" />
+            <Field name="Sales" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.7 FORUMULA$`" type="Double" />
+            <Field name="Profit" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.7 FORUMULA$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="186" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeYear([Order Date])" field="Order Year" size="8" type="Int64" />
+            <FormulaField expression="Left([Customer Name], 3)" field="First 3 chars" size="64" type="String" />
+            <FormulaField expression="Round([Sales], 2)" field="Round Sales" size="1073741823" type="V_WString" />
+            <FormulaField expression="if [Sales]&gt; 500 then &quot;HighSales&quot; else &quot;LowSales&quot; endif " field="Sales Type" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Order Year = DateTimeYear([Order Date])
+First 3 chars = Left([Customer Name], 3)...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>3.8 FORMULA - Different Functions in Alteryx</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

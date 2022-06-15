@@ -1,0 +1,666 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[SALESDATA
+]]></AnnotationText>
+          <DefaultAnnotationText>8.3 SALES DATA.xlsx
+Query=`Orders$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row ID" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+            <Field name="Order ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Order Date" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Date" />
+            <Field name="Ship Date" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Date" />
+            <Field name="Ship Mode" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Customer ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Customer Name" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Segment" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Country" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+            <Field name="City" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+            <Field name="State" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Postal Code" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+            <Field name="Region" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Product ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Category" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Sub-Category" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Product Name" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_WString" />
+            <Field name="Sales" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+            <Field name="Quantity" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+            <Field name="Discount" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+            <Field name="Profit" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="365" y="17" width="337" height="149" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>CENTRAL SALES DATA</Caption>
+          <Style TextColor="#ffffff" FillColor="#800000" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="390" y="66" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Region</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-08-27 20:49:31</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>CENTRAL</Operand>
+                  <StartDate>2020-08-27 20:49:31</StartDate>
+                  <EndDate>2020-08-27 20:49:31</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText><![CDATA[CENTRAL
+]]></AnnotationText>
+              <DefaultAnnotationText>[Region] = "CENTRAL"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+            <Position x="498" y="66" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields>
+                <Field field="Order ID" selected="True" />
+                <Field field="Ship Mode" selected="True" />
+                <Field field="Customer ID" selected="True" />
+                <Field field="Customer Name" selected="True" />
+                <Field field="Segment" selected="True" />
+                <Field field="Country" selected="True" />
+                <Field field="City" selected="True" />
+                <Field field="State" selected="True" />
+                <Field field="Region" selected="True" />
+                <Field field="Product ID" selected="True" />
+                <Field field="Category" selected="True" />
+                <Field field="Sub-Category" selected="True" />
+                <Field field="Product Name" selected="True" />
+                <Field field="*Unknown" selected="True" />
+              </Fields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Row ID" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Order ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Order Date" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Date" />
+                <Field name="Ship Date" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Date" />
+                <Field name="Ship Mode" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Customer ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Customer Name" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Segment" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Country" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="City" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="State" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Postal Code" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Region" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Product ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Category" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Sub-Category" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Product Name" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_WString" />
+                <Field name="Sales" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Quantity" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Discount" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Profit" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="618" y="66" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="150" y="162" width="184.8735" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>WEST SALES DATA</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="174" y="222" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Region</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-08-27 20:49:41</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2020-08-27 20:49:41</StartDate>
+                  <EndDate>2020-08-27 20:49:41</EndDate>
+                  <Operand>WEST</Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>WEST</AnnotationText>
+              <DefaultAnnotationText>[Region] = "WEST"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+            <Position x="282" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields>
+                <Field field="Order ID" selected="True" />
+                <Field field="Ship Mode" selected="True" />
+                <Field field="Customer ID" selected="True" />
+                <Field field="Customer Name" selected="True" />
+                <Field field="Segment" selected="True" />
+                <Field field="Country" selected="True" />
+                <Field field="City" selected="True" />
+                <Field field="State" selected="True" />
+                <Field field="Region" selected="True" />
+                <Field field="Product ID" selected="True" />
+                <Field field="Category" selected="True" />
+                <Field field="Sub-Category" selected="True" />
+                <Field field="Product Name" selected="True" />
+                <Field field="*Unknown" selected="True" />
+              </Fields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Row ID" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Order ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Order Date" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Date" />
+                <Field name="Ship Date" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Date" />
+                <Field name="Ship Mode" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Customer ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Customer Name" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Segment" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Country" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="City" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="State" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Postal Code" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Region" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Product ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Category" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Sub-Category" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Product Name" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_WString" />
+                <Field name="Sales" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Quantity" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Discount" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Profit" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="402" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="138" y="246" width="193.1632" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>SOUTH SALES DATA</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="162" y="306" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Region</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-08-27 20:49:48</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>SOUTH</Operand>
+                  <StartDate>2020-08-27 20:49:48</StartDate>
+                  <EndDate>2020-08-27 20:49:48</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>SOUTH</AnnotationText>
+              <DefaultAnnotationText>[Region] = "SOUTH"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="390" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+            <Position x="270" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields>
+                <Field field="Order ID" selected="True" />
+                <Field field="Ship Mode" selected="True" />
+                <Field field="Customer ID" selected="True" />
+                <Field field="Customer Name" selected="True" />
+                <Field field="Segment" selected="True" />
+                <Field field="Country" selected="True" />
+                <Field field="City" selected="True" />
+                <Field field="State" selected="True" />
+                <Field field="Region" selected="True" />
+                <Field field="Product ID" selected="True" />
+                <Field field="Category" selected="True" />
+                <Field field="Sub-Category" selected="True" />
+                <Field field="Product Name" selected="True" />
+                <Field field="*Unknown" selected="True" />
+              </Fields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Row ID" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Order ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Order Date" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Date" />
+                <Field name="Ship Date" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Date" />
+                <Field name="Ship Mode" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Customer ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Customer Name" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Segment" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Country" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="City" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="State" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Postal Code" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Region" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Product ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Category" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Sub-Category" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Product Name" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_WString" />
+                <Field name="Sales" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Quantity" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Discount" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Profit" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="150" y="318" width="181.3484" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>EAST SALES DATA</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="174" y="378" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Region</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-08-27 20:50:10</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>EAST</Operand>
+                  <StartDate>2020-08-27 20:50:10</StartDate>
+                  <EndDate>2020-08-27 20:50:10</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>EAST</AnnotationText>
+              <DefaultAnnotationText>[Region] = "EAST"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="23">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="402" y="366" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+            <Position x="282" y="366" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields>
+                <Field field="Order ID" selected="True" />
+                <Field field="Ship Mode" selected="True" />
+                <Field field="Customer ID" selected="True" />
+                <Field field="Customer Name" selected="True" />
+                <Field field="Segment" selected="True" />
+                <Field field="Country" selected="True" />
+                <Field field="City" selected="True" />
+                <Field field="State" selected="True" />
+                <Field field="Region" selected="True" />
+                <Field field="Product ID" selected="True" />
+                <Field field="Category" selected="True" />
+                <Field field="Sub-Category" selected="True" />
+                <Field field="Product Name" selected="True" />
+                <Field field="*Unknown" selected="True" />
+              </Fields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Row ID" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Order ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Order Date" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Date" />
+                <Field name="Ship Date" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Date" />
+                <Field name="Ship Mode" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Customer ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Customer Name" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Segment" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Country" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="City" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="State" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Postal Code" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Region" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Product ID" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Category" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Sub-Category" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_String" />
+                <Field name="Product Name" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="V_WString" />
+                <Field name="Sales" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Quantity" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Discount" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+                <Field name="Profit" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\8.3 SALES DATA.xlsx|||`Orders$`" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="True" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="True" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="True" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>8.3 TOOL CONTAINER</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

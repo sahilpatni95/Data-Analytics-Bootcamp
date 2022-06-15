@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.2">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\Pavan Lalwani 3\Desktop\Alteryx\5.1 Arrange.xlsx|||`SalesData`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[SalesData
+]]></AnnotationText>
+          <DefaultAnnotationText>5.1 Arrange.xlsx
+Query=`SalesData`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Region" size="255" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\5.1 Arrange.xlsx|||`SalesData`" type="V_String" />
+            <Field name="Year -2020" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\5.1 Arrange.xlsx|||`SalesData`" type="Double" />
+            <Field name="Year -2019" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\5.1 Arrange.xlsx|||`SalesData`" type="Double" />
+            <Field name="Year -2018" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\5.1 Arrange.xlsx|||`SalesData`" type="Double" />
+            <Field name="Year -2017" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\5.1 Arrange.xlsx|||`SalesData`" type="Double" />
+            <Field name="Year -2016" source="File: C:\Users\Pavan Lalwani 3\Desktop\Alteryx\5.1 Arrange.xlsx|||`SalesData`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Arrange.Arrange">
+        <Position x="222" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <KeyFields orderChanged="False" />
+          <OutputFields>
+            <Columns>
+              <Column name="Region" type="combobox" />
+              <Column name="Year" type="text" context="Take from Descriptions" />
+              <Column name="Values" type="combobox" />
+            </Columns>
+            <Data>
+              <r>
+                <c>Region</c>
+                <c>2020 Sales</c>
+                <c>Year -2020</c>
+              </r>
+              <r>
+                <c>Region</c>
+                <c>2019 Sales</c>
+                <c>Year -2019</c>
+              </r>
+              <r>
+                <c>Region</c>
+                <c>2018 Sales</c>
+                <c>Year -2018</c>
+              </r>
+            </Data>
+          </OutputFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxArrange" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>5.1 ARRANGE TOOL</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="450" y="30" width="264" height="156" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>1) Select Column
+2) Deselect Column
+3) Rename Column
+4) Re-Order Column
+5) Change field type</Text>
+          <Font name="Bookman Old Style" size="15.75" style="0" />
+          <TextColor name="White" />
+          <FillColor name="Black" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="42" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.17 SELECT TOOL$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Section 3 - Preparation.xlsx
+Query=`3.17 SELECT TOOL$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row ID" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.17 SELECT TOOL$`" type="Double" />
+            <Field name="Customer Name" size="255" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.17 SELECT TOOL$`" type="V_String" />
+            <Field name="Date" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.17 SELECT TOOL$`" type="Date" />
+            <Field name="Sub-Category" size="255" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.17 SELECT TOOL$`" type="V_String" />
+            <Field name="2019 Sales" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.17 SELECT TOOL$`" type="Double" />
+            <Field name="2020 Sales" source="File: C:\Users\Test\Desktop\Alteryx Data Files\Section 3\Section 3 - Preparation.xlsx|||`3.17 SELECT TOOL$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="162" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Date" selected="True" />
+            <SelectField field="Customer Name" selected="True" rename="Client Name" type="String" size="255" description="These are existing clients" />
+            <SelectField field="Row ID" selected="True" />
+            <SelectField field="Sub-Category" selected="True" />
+            <SelectField field="2019 Sales" selected="True" type="Int32" size="4" />
+            <SelectField field="2020 Sales" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>3.17 SELECT TOOL</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
